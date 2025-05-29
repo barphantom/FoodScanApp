@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">FoodScanApp</string>
+    <string name="app_name" translatable="false">FoodScanApp</string>
+    <string name="tekst_przywitania">Witaj, jaki produkt chcesz sprawdzić?</string>
+    <string name="skanuj_produkt_przycisk">Skanuj produkt</string>
+    <string name="jezyk_polski">Polski</string>
+    <string name="jezyk_angielski">English</string>
+    <string name="wyloguj">wyloguj</string>
+    <string name="tryb_ciemny">tryb ciemny</string>
+    <string name="tryb_jasny">tryb jasny</string>
 </resources>

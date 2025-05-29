@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tekst_przywitania">Hi, what product do you want to check?</string>
+    <string name="skanuj_produkt_przycisk">Scan product</string>
+    <string name="jezyk_polski">Polski</string>
+    <string name="jezyk_angielski">English</string>
+    <string name="wyloguj">log out</string>
+    <string name="tryb_ciemny">dark mode</string>
+    <string name="tryb_jasny">light mode</string>
+</resources>
