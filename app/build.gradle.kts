@@ -66,7 +66,8 @@ dependencies {
     implementation(libs.moshi.kotlin)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.datastore.preferences)
-
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.firebase.messaging)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
