@@ -7,4 +7,26 @@
     <string name="wyloguj">wyloguj</string>
     <string name="tryb_ciemny">tryb ciemny</string>
     <string name="tryb_jasny">tryb jasny</string>
+    <string name="wczytaj_produkt">wczytaj produkt</string>
+    <string name="zapisz_produkt">zapisz produkt</string>
+    <string name="wroc_przycisk">Wróć</string>
+    <string name="dodaj_produkt_text">Dodaj produkt</string>
+    <string name="kod_kreskowy">Kod kreskowy</string>
+    <string name="nazwa_produktu">Nazwa produktu</string>
+    <string name="gramatura_g">Gramatura (g)</string>
+    <string name="makroskladniki_na_100g">Makroskładniki na 100g</string>
+    <string name="kalorie">Kalorie</string>
+    <string name="bialko">Białko</string>
+    <string name="tluszcz">Tłuszcz</string>
+    <string name="weglowodany">Węglowodany</string>
+    <string name="skladniki_oddzielone_przecinkami">Składniki (oddzielone przecinkami)</string>
+    <string name="toast_produkt_zapisany">Produkt zapisany</string>
+    <string name="toast_blad_zapisu">"Błąd zapisu: "</string>
+    <string name="przycisk_zapisz_produkt">Zapisz produkt</string>
+    <string name="sprawdz_produkt_po_kodzie_kreskowym">Sprawdź produkt po kodzie kreskowym</string>
+    <string name="label_kod_kreskowy">Kod kreskowy</string>
+    <string name="przycisk_wyslij">Wyślij</string>
+    <string name="brak_danych_produktu">Brak danych produktu</string>
+    <string name="nazwa_produktu_dwukropek">"Nazwa produktu: "</string>
+    <string name="przycisk_wszystkie_produkty">wszystkie produkty</string>
 </resources>

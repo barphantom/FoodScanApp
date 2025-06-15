@@ -7,4 +7,26 @@
     <string name="wyloguj">log out</string>
     <string name="tryb_ciemny">dark mode</string>
     <string name="tryb_jasny">light mode</string>
+    <string name="wczytaj_produkt">find product</string>
+    <string name="zapisz_produkt">save product</string>
+    <string name="wroc_przycisk">Go back</string>
+    <string name="dodaj_produkt_text">Add product</string>
+    <string name="kod_kreskowy">Barcode</string>
+    <string name="nazwa_produktu">Product name</string>
+    <string name="gramatura_g">Weight (g)</string>
+    <string name="makroskladniki_na_100g">Micronutrients na 100g</string>
+    <string name="kalorie">Calories</string>
+    <string name="bialko">Protein</string>
+    <string name="tluszcz">Fat</string>
+    <string name="weglowodany">Carbohydrates</string>
+    <string name="skladniki_oddzielone_przecinkami">Ingredients (separated by commas)</string>
+    <string name="toast_produkt_zapisany">Product saved</string>
+    <string name="toast_blad_zapisu">"Error while saving: "</string>
+    <string name="przycisk_zapisz_produkt">Save product</string>
+    <string name="sprawdz_produkt_po_kodzie_kreskowym">Check product by barcode</string>
+    <string name="label_kod_kreskowy">Barcode</string>
+    <string name="przycisk_wyslij">Send</string>
+    <string name="brak_danych_produktu">No product data</string>
+    <string name="nazwa_produktu_dwukropek">"Product name: "</string>
+    <string name="przycisk_wszystkie_produkty">all products</string>
 </resources>
