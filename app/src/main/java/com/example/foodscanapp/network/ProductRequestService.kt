@@ -10,8 +10,10 @@ import io.ktor.client.statement.*
 import io.ktor.http.*
 
 class ProductRequestService(private val client: HttpClient) {
-    private val baseUrl = "http://192.168.23.97:8080/"
-//    private val baseUrl = "http://192.168.0.150:8080/"
+//    Dla telefonu
+//    private val baseUrl = "http://192.168.23.97:8080/"
+//    Dla wifi
+    private val baseUrl = "http://192.168.0.150:8080/"
 
     suspend fun getProduct(barcode: String): ProductResponse? {
         return try {

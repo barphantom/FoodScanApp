@@ -25,9 +25,9 @@ data class Nutriments (
     @SerializedName("proteins") val proteins: Float?,
 )
 
-data class Ingredient(
-    @Json(name = "id") val id: String,
-    @Json(name = "text") val text: String,
-    @Json(name = "vegan") val vegan: String?,
-    @Json(name = "vegetarian") val vegetarian: String?
-)
+//data class Ingredient(
+//    @Json(name = "id") val id: String,
+//    @Json(name = "text") val text: String,
+//    @Json(name = "vegan") val vegan: String?,
+//    @Json(name = "vegetarian") val vegetarian: String?
+//)

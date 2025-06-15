@@ -5,19 +5,20 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AllInbox
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.DocumentScanner
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.SaveAs
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -38,7 +39,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.foodscanapp.R
 import com.example.foodscanapp.navigation.Screen
@@ -114,6 +114,72 @@ fun HomeScreen(
                 )
                 Text(
                     text = stringResource(R.string.skanuj_produkt_przycisk),
+                    style = MaterialTheme.typography.labelLarge
+                )
+            }
+
+            // Zapisz produkt
+            Button(
+                onClick = { navController.navigate(Screen.SaveProductScreen.route) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Default.SaveAs,
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 8.dp)
+                )
+                Text(
+                    text = stringResource(R.string.zapisz_produkt),
+                    style = MaterialTheme.typography.labelLarge
+                )
+            }
+
+            // Wczytaj produkt
+            Button(
+                onClick = { navController.navigate(Screen.BarcodeCheckScreen.route) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Link,
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 8.dp)
+                )
+                Text(
+                    text = stringResource(R.string.wczytaj_produkt),
+                    style = MaterialTheme.typography.labelLarge
+                )
+            }
+
+            // Wszystkie produkty
+            Button(
+                onClick = { navController.navigate(Screen.AllProductsScreen.route) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Default.AllInbox,
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 8.dp)
+                )
+                Text(
+                    text = stringResource(R.string.przycisk_wszystkie_produkty),
                     style = MaterialTheme.typography.labelLarge
                 )
             }

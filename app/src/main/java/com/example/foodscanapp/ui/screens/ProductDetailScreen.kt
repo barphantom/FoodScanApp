@@ -21,7 +21,6 @@ fun ProductDetailScreen(
 ) {
     val product = viewModel.product.collectAsState().value
 
-
     if (product == null) {
         // Jeśli nie ma produktu (np. bezpośrednie wejście na ekran)
         Column (
@@ -74,10 +73,10 @@ fun ProductDetailScreen(
                 productInfo.ingredients?.let { ingredients ->
                     println("\nSzczegółowe składniki (${ingredients.size}):")
                     ingredients.forEachIndexed { index, ingredient ->
-                        println("${index + 1}. ${ingredient.text}")
-                        println("   ID: ${ingredient.id}")
-                        println("   Wegański: ${ingredient.vegan ?: "nieznane"}")
-                        println("   Wegetariański: ${ingredient.vegetarian ?: "nieznane"}")
+//                        println("${index + 1}. ${ingredient.text}")
+//                        println("   ID: ${ingredient.id}")
+//                        println("   Wegański: ${ingredient.vegan ?: "nieznane"}")
+//                        println("   Wegetariański: ${ingredient.vegetarian ?: "nieznane"}")
                     }
                 } ?: println("Brak szczegółowych danych o składnikach")
             } ?: println("Brak głównych informacji o produkcie")
@@ -103,11 +102,11 @@ fun ProductDetailScreen(
 
             // Szczegółowe skłądniki z oceną
             product.product?.ingredients?.forEach { ingredient ->
-                val quality = IngredientAnalyzer.analyzeIngredient(ingredient.text)
-                when (quality) {
-                    IngredientQuality.GOOD -> Text("\uD83D\uDFE2 ${ingredient.text}")
-                    IngredientQuality.BAD -> Text("\uD83D\uDD34 ${ingredient.text}")
-                    IngredientQuality.UNKNOWN -> Text("⚪ ${ingredient.text}")
+//                val quality = IngredientAnalyzer.analyzeIngredient(ingredient.text)
+//                when (quality) {
+//                    IngredientQuality.GOOD -> Text("\uD83D\uDFE2 ${ingredient.text}")
+//                    IngredientQuality.BAD -> Text("\uD83D\uDD34 ${ingredient.text}")
+//                    IngredientQuality.UNKNOWN -> Text("⚪ ${ingredient.text}")
                 }
             }
 
@@ -115,16 +114,17 @@ fun ProductDetailScreen(
             product.product?.ingredients?.let { ingredients ->
                 Text("Szczegółowe składniki:", style = MaterialTheme.typography.bodyLarge)
                 ingredients.forEachIndexed { index, ingredient ->
-                    Text("${index + 1}. ${ingredient.text}", style = MaterialTheme.typography.bodyMedium)
-                    Text("   Wegański: ${ingredient.vegan ?: "nieznane"}", style = MaterialTheme.typography.bodySmall)
-                    Text("   Wegetariański: ${ingredient.vegetarian ?: "nieznane"}", style = MaterialTheme.typography.bodySmall)
+//                    Text("${index + 1}. ${ingredient.text}", style = MaterialTheme.typography.bodyMedium)
+//                    Text("   Wegański: ${ingredient.vegan ?: "nieznane"}", style = MaterialTheme.typography.bodySmall)
+//                    Text("   Wegetariański: ${ingredient.vegetarian ?: "nieznane"}", style = MaterialTheme.typography.bodySmall)
                 }
             }
 
 //            Text("Marka: ${product.product?.brands ?: "Brak danych"}", style = MaterialTheme.typography.bodyLarge)
+            Text("Marka: ${product.product ?: "Brak danych"}", style = MaterialTheme.typography.bodyLarge)
 //            Text("Składniki: ${product.product?.ingredientsText ?: "Brak danych"}", style = MaterialTheme.typography.bodyMedium)
 //            Text("Link do zdjęcia: ${product.product?.imageUrl ?: "Brak danych"}", style = MaterialTheme.typography.bodyMedium)
 //            Text("Kraj pochodzenia: ${product.product?.country ?: "Brak danych"}", style = MaterialTheme.typography.bodyMedium)
-        }
+//        }
     }
 }

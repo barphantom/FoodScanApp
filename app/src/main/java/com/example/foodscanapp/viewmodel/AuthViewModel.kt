@@ -37,6 +37,14 @@ class AuthViewModel : ViewModel() {
             try {
                 auth.signInWithEmailAndPassword(email, password).await()
                 _authResult.value = "Zalogowano pomyślnie"
+                auth.currentUser?.getIdToken(true)
+                    ?.addOnSuccessListener { result ->
+                        val token = result.token
+                        println("TOKEN: $token")
+                    }
+                    ?.addOnFailureListener { error ->
+                        println("Błąd pobierania tokenu ${error.message}")
+                    }
             } catch (e: Exception) {
                 _authResult.value = "Bład logowania: ${e.message}"
             }

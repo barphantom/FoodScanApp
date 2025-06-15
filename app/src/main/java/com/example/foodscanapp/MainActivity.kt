@@ -32,6 +32,7 @@ import com.example.foodscanapp.data.SettingsDataStore
 import com.example.foodscanapp.utils.LocaleManager
 import com.example.foodscanapp.viewmodel.SettingsViewModel
 import android.Manifest
+import com.example.foodscanapp.viewmodel.ProductRequestViewModel
 
 import com.google.firebase.FirebaseApp
 
@@ -74,32 +75,17 @@ class MainActivity : ComponentActivity() {
             )
 
             val productViewModel: ProductViewModel = viewModel()
+            val productRequestViewModel: ProductRequestViewModel = viewModel()
 
             val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
 
             FoodScanAppTheme(darkTheme = isDarkTheme) {
                 AppNavigation(
                     productViewModel = productViewModel,
-                    settingsViewModel = settingsViewModel
+                    settingsViewModel = settingsViewModel,
+                    productRequestViewModel = productRequestViewModel
                 )
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-//    FoodScanAppTheme {
-//        Greeting("Android")
-//        AppNavigation()
-//    }
 }
